@@ -1,0 +1,16 @@
+import sqlite3
+
+# Conectarse a la base de datos
+conn = sqlite3.connect('C:\\Users\\u2204\\Documents\\GlobantChallenge\\src\\mydatabase.db')  # Ajusta la ruta según sea necesario
+cursor = conn.cursor()
+
+# Ejecutar una consulta para obtener todos los registros de la tabla departments
+cursor.execute("SELECT * FROM departments")
+rows = cursor.fetchall()
+
+# Imprimir los registros
+for row in rows:
+    print(row)
+
+# Cerrar la conexión
+conn.close()
