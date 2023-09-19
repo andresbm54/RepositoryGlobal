@@ -70,4 +70,46 @@ Returns the number of employees hired for each job and department in 2021 divide
 
 Returns the list of departments that hired more employees than the mean of employees hired in 2021 for all departments.
 
+## Testing
 
+To run the test cases, navigate to the project directory and execute:
+
+\```bash
+python3 -m unittest test_app.py
+\```
+
+## Deployment on EC2
+
+The API is deployed on an AWS EC2 instance. Here are the details for accessing the API:
+
+- Public IP: `18.118.168.241`
+- Connection example: 
+  \```
+  ssh -i "ANDRES.pem" ubuntu@ec2-18-118-168-241.us-east-2.compute.amazonaws.com
+  \```
+
+## Docker Containerization
+
+A Dockerfile is included in the repository to build and run the API in a Docker container. To build the Docker image, navigate to the project directory and execute:
+
+\```bash
+docker build -t your-image-name .
+\```
+
+To run the Docker container, execute:
+
+\```bash
+docker run -p 5000:5000 your-image-name
+\```
+
+## Output
+
+The tests were executed on an AWS EC2 instance, and all tests passed successfully.
+
+\```
+......
+----------------------------------------------------------------------
+Ran 6 tests in 0.398s
+
+OK
+\```
